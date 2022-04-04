@@ -1,0 +1,54 @@
+
+Ques 1: Find sum of N natural number
+
+ Ans : There is 2 way to get sum of all numbers.
+
+ 1) First declare one variable int sum=0 and run a for loop from 1 to N and inside for loop do the sum of all number one by one. But in this way loop will run N time and complexity will be very high for the large numbers.
+
+    Example : For 10 millions input, for loop will run 10 millions time,
+
+    int sum=0;
+    for(int i=1; i<=10Million; i++){
+	sum+=i; }
+
+
+ 2nd way :
+
+    To find out sum of N natural numbers we have formula sum=n(n+1)/2
+
+	-> no need of for loop and in just one step we can find sum of n numbers. that means time complexity is constant whihc will be O(1);
+
+
+==================================================================================================================================
+
+Questions 2 : Given a number A. Return square root of the number if it is perfect square otherwise return -1.
+Solution :
+Explanation :
+ 9 is perfect square  : Yes (3*3=9) (a*a=n) : if 2 number multiplication is equal to the number then it's perfect square.
+
+ 11 is perfect Square : No
+
+ 36 : can divide by (2, 3, 4, 6, 12, ..36 ) : this is factor or divisor , so if multiplication of same factor(3*3) is equal to the number then it is perfect otherwise not perfect square.
+     Check after 6 multiplication of (12*12) >=36 , so no need to check after 6 cause it is exceeding number limit. So check before 12. But how can we find exact number, in computer can't find so divide it by 2. and run the loop till N/2.
+
+       i=1 -> N/2 ; if (i*i==n) then perfect otherwise not.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
