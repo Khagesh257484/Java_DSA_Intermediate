@@ -1,4 +1,4 @@
-package com.company.java.dsa.string;
+package com.dsa.beginner.string;
 
 import java.util.Scanner;
 /*

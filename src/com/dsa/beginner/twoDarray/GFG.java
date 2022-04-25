@@ -1,4 +1,4 @@
-package com.ggl.practice.twoDarray;
+package com.dsa.beginner.twoDarray;
 
 class GFG
 {

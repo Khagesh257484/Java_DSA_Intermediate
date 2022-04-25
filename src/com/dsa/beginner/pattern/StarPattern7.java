@@ -1,4 +1,4 @@
-package com.ggl.practice.patterns;
+package com.dsa.beginner.pattern;
 
 public class StarPattern7 {
 }

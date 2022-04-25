@@ -34,20 +34,20 @@ A + B = [[1+9, 2+8, 3+7],[4+6, 5+5, 6+4],[7+3, 8+2, 9+1]] = [[10, 10, 10], [10, 
 
 import java.util.Arrays;
 
-public class AddMatrices {
+public class SubtractMatrice {
     public int[][] solve(int[][] A, int[][] B) {
         int row = A.length, col = A[0].length;
         int[][] sum = new int[row][col];
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
-                sum[i][j] = A[i][j] + B[i][j];
+                sum[i][j] = A[i][j] - B[i][j];
             }
         }
         return sum;
     }
 
     public static void main(String[] args) {
-        AddMatrices addMatrices = new AddMatrices();
+        SubtractMatrice addMatrices = new SubtractMatrice();
         int[][] A = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
         int[][] B = {{9, 8, 7}, {6, 5, 4}, {3, 2, 1}};
 

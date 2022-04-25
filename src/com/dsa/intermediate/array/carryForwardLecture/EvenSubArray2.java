@@ -37,26 +37,19 @@ Explanation 2:
  There is no way to divide the array into even length subarrays.
 
 * */
-public class EvenSubArray {
+public class EvenSubArray2 {
     public String solve(int[] A) {
         int n = A.length, sub_length = 0;
-        for (int i = 0; i < n; i++) {
-            if (A[i] % 2 == 0)
-                for (int j = i + 1; j < n; j++) {
-                    if (A[j] % 2 == 0)
-                        sub_length = (j - i) + 1;
-                    if (sub_length % 2 == 0)
-                        return "YES";
-                }
-        }
-        return "NO";
-
+        if (A[0] % 2 == 0 && A[n - 1] % 2 == 0 && n % 2 == 0)
+            return "YES";
+        else
+            return "NO";
     }
 
     public static void main(String[] args) {
-       EvenSubArray evenSubArray=new EvenSubArray();
-       //int[] a={1,1,4,5,7,8,10,5};
-        int[] a={2, 4, 8, 7, 6};
+        EvenSubArray2 evenSubArray = new EvenSubArray2();
+        //int[] a={1,1,4,5,7,8,10,5};
+        int[] a = {2, 4, 8, 7, 6};
         System.out.println(evenSubArray.solve(a));
     }
 }

@@ -1,4 +1,4 @@
-package com.company.java.dsa.string;
+package com.dsa.beginner.string;
 
 /*
  You are given a character string A. You to trim(remove) both leading and trailing asterisk characters('*') in the string and return the resultant string.

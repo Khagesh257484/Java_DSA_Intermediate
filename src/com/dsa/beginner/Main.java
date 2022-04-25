@@ -1,4 +1,4 @@
-package com.company.java.dsa;
+package com.dsa.beginner;
 
 public class Main {
 

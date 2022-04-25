@@ -1,4 +1,4 @@
-package com.company.java.dsa.string;
+package com.dsa.beginner.string;
 
 /*
    Reverse a sentence in String and also word should be reversed with exact space.

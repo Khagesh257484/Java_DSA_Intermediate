@@ -1,4 +1,4 @@
-package com.company.java.dsa.series;
+package com.dsa.beginner.series;
 
 import java.util.Scanner;
 

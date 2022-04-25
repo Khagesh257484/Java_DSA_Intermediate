@@ -23,14 +23,16 @@ O/P :  3 4 1 2
 
 Solution :
  1) Reverse the array
-
- 2) Rever
+ 2) Reverse starting bth element (0,b)
+ 3) Reverse (n-b) element
 
 * */
 public class RotateArrayFromRightToLeft {
+
     public static int[] rotateArray(int A[], int B) {
         int n = A.length;
         int j = A.length;
+        B = B % n;
         // Reversing array using SWAP technique
         for (int i = 0; i < j; i++) {
             if (i < j) {
@@ -53,12 +55,12 @@ public class RotateArrayFromRightToLeft {
         }
 
         // Reverse Last N-B element
-        int l = B ,m= A.length;
+        int l = B, m = A.length;
         for (int i = l; i < m; i++) {
-            if(i<m){
-                int temp=A[m-1];
-                A[m-1]=A[i];
-                A[i]=temp;
+            if (i < m) {
+                int temp = A[m - 1];
+                A[m - 1] = A[i];
+                A[i] = temp;
                 m--;
             }
         }

@@ -2,56 +2,78 @@ package com.dsa.intermediate.array.twoDarray;
 /*
 Problem Description
 
-You are given two matrices A & B of same size, you have to return another matrix which is the sum of A and B.
+You are given two integer matrices A(having M X N size) and B(having N X P). You have to multiply matrix A with B and return the resultant matrix. (i.e. return the matrix AB).
 
 Problem Constraints :
-1 <= A.size(), B.size() <= 1000
-1 <= A[i].size(), B[i].size() <= 1000
-1 <= A[i][j], B[i][j] <= 1000
+1 <= M, N, P <= 100
+-100 <= A[i][j], B[i][j] <= 100
+
 
 Input Format :
-First argument is vector of vector of integers representing matrix A.
-Second argument is vecotor of vector of integers representing matrix B.
+First argument is a 2D integer matrix A.
+Second argument is a 2D integer matrix B.
 
 Output Format :
-You have to return a vector of vector of integers after doing required operations.
+Return a 2D integer matrix denoting AB.
 
-Example Input :-
+Example  :
+
 Input 1:
-A = [[1, 2, 3],[4, 5, 6],[7, 8, 9]]
-B = [[9, 8, 7],[6, 5, 4],[3, 2, 1]]
+ A = [[1, 2],            B = [[5, 6],
+      [3, 4]]                 [7, 8]]
+
+Input 2:
+ A = [[1, 1]]            B = [[2],
+                              [3]]
+
 
 Example Output :
+
 Output 1:
-[[10, 10, 10], [10, 10, 10], [10, 10, 10]]
+ [[19, 22],
+  [43, 50]]
+
+Output 2:
+ [[5]]
 
 Example Explanation :
+
 Explanation 1:
-A + B = [[1+9, 2+8, 3+7],[4+6, 5+5, 6+4],[7+3, 8+2, 9+1]] = [[10, 10, 10], [10, 10, 10], [10, 10, 10]].
+ [[1, 1]].[[2, 3]] = [[1 * 2 + 1 * 3]] = [[5]]
 
 * */
 
 
 import java.util.Arrays;
 
-public class AddMatrices {
+public class MultiplicationMatrix {
     public int[][] solve(int[][] A, int[][] B) {
-        int row = A.length, col = A[0].length;
-        int[][] sum = new int[row][col];
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {
-                sum[i][j] = A[i][j] + B[i][j];
+        int row1 = A.length;
+        int col1 = A[0].length;
+        int row2 = B.length;
+        int col2 = A[0].length;
+
+        int C[][] = new int[row1][col2];
+
+        if (row2 != col1) {
+            System.out.println("Multiplication Not Possible");
+            return null;
+        }
+
+        for (int i = 0; i < row1; i++) {
+            for (int j = 0; j < col2; j++) {
+                for (int k = 0; k < row2; k++)
+                    C[i][j] += A[i][k] * B[k][j];
             }
         }
-        return sum;
+
+        return C;
     }
 
     public static void main(String[] args) {
-        AddMatrices addMatrices = new AddMatrices();
-        int[][] A = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-        int[][] B = {{9, 8, 7}, {6, 5, 4}, {3, 2, 1}};
-
-        System.out.println(Arrays.deepToString(addMatrices.solve(A, B)));
-
+        MultiplicationMatrix multiplicationMatrix = new MultiplicationMatrix();
+        int a[][] = {{1, 1, 1}, {2, 2, 2}, {3, 3, 3}};
+        int b[][] = {{1, 1, 1}, {2, 2, 2}, {3, 3, 3}};
+        System.out.println(Arrays.deepToString(multiplicationMatrix.solve(a, b)));
     }
 }

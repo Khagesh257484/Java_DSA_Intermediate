@@ -1,4 +1,4 @@
-package com.ggl.practice.array;
+package com.dsa.beginner.array;
 
 import java.util.Scanner;
 

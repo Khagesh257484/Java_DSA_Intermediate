@@ -1,4 +1,4 @@
-package com.ggl.practice.patterns;
+package com.dsa.beginner.pattern;
 
 public class Test {
     public static void main(String[] args) {

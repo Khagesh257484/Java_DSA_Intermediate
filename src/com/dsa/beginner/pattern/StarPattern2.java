@@ -1,4 +1,4 @@
-package com.ggl.practice.patterns;
+package com.dsa.beginner.pattern;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package com.ggl.practice.numberConversion;
+package com.dsa.beginner.numberConversion;
 
 import java.util.Scanner;
 

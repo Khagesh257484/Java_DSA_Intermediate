@@ -1,4 +1,4 @@
-package com.company.java.dsa.string;
+package com.dsa.beginner.string;
 
 public class SplitString {
     public static void main(String[] args) {

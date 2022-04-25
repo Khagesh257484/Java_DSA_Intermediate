@@ -1,4 +1,4 @@
-package com.company.java.dsa.pattern;
+package com.dsa.beginner.pattern;
 
 import java.util.ArrayList;
 

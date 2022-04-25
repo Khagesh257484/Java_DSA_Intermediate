@@ -1,4 +1,4 @@
-package com.ggl.practice.basic;
+package com.dsa.beginner.basic;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package com.company.java.dsa.string;
+package com.dsa.beginner.string;
 /*
  I/P : Programming is fun
  O/P : gnimmargorP si nuf

@@ -1,4 +1,4 @@
-package com.company.java.dsa.array;
+package com.dsa.beginner.array;
 
 public class IdentityMatrix {
     public static int solve(final int[][] A) {

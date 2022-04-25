@@ -1,4 +1,4 @@
-package com.ggl.practice.twoDarray;
+package com.dsa.beginner.twoDarray;
 
 public class AreMatricesSame {
     public static int areMatricesSame(int[][] A, int[][] B) {

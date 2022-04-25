@@ -1,4 +1,4 @@
-package com.company.java.dsa.basic;
+package com.dsa.beginner.basic;
 
 /*
 
