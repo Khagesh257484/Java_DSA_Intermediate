@@ -11,7 +11,8 @@ public class GcdOf2Numbers {
 
        int A=36;
        int B=24;
-       int r=A%B;
+       int r=B%A;
+        System.out.println(r);
 
        while(r!=0){
            A=B;
