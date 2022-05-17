@@ -1,35 +1,30 @@
 package com.dsa.intermediate.recursion;
 
-import java.util.Scanner;
+/*
+Question : Print numbers in increasing and decreasing order for number n using recursion.
+* */
 
-// print n number from 1 to n using recursion
+
 public class PrintNumberUsingRecursion {
-    public static void printNumberInDecreasingOrder(int n) {
-        int i=1;
-        if(n<i){
-            System.out.println("Breaking Recursion.......");
-            return;
-        }
-        System.out.print(n+" ");
-        printNumberInDecreasingOrder(n-i);
-    }
 
-    public static void printNumberInIncreasingOrder(int n){
-        int org=n;
-
-        if(1 >= org){
-            System.out.println("Break");
-            return;
+    public void printNumber(int n){
+        if(n>=1){
+            System.out.println(n);  // If use this here, then print in decreasing order
+            printNumber(n-1);
+           // System.out.println(n);   // if use here, then print in increasing order
         }
+
+        /*
+                // This again will go till infinite
         System.out.println(n);
-        printNumberInIncreasingOrder(1+1);
+        printNumber(n-1);
 
+        */
     }
 
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        int n=sc.nextInt();
-        printNumberInDecreasingOrder(n);
-        printNumberInIncreasingOrder(n);
+        PrintNumberUsingRecursion test=new PrintNumberUsingRecursion();
+        test.printNumber(5);
+
     }
 }

@@ -1,5 +1,6 @@
 package com.dsa.intermediate.sorting;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /*
@@ -65,7 +66,7 @@ Single loop sorting shows that number of loops has little to do with time comple
 
     * */
 
-    // TC : O(N^2) SC : O(1) 
+    // TC : O(N^2) SC : O(1)
     public int[] sortColors(int[] A) {
         int n = A.length;
         for (int i = 0; i < n - 1; i++) {
@@ -85,11 +86,40 @@ Single loop sorting shows that number of loops has little to do with time comple
         return A;
     }
 
+    public ArrayList<Integer> sortColors2(ArrayList<Integer> A) {
+        int[] arr = new int[3];
+
+        for (int num : A) {
+            arr[num]++;
+        }
+
+        for (int i=0;i<A.size(); i++) {
+            if (arr[0] != 0) {
+                A.set(i, 0);
+                arr[0]--;
+            }
+            else if (arr[1] != 0) {
+                A.set(i, 1);
+                arr[1]--;
+            }
+            else {
+                A.set(i,2);
+                arr[2]--;
+            }
+        }
+        return A;
+    }
+
     public static void main(String[] args) {
         SortByColor color = new SortByColor();
-        int[] a = {0, 1, 2, 0, 1, 2};
+      /*  int[] a = {0, 1, 2, 0, 1, 2};
         int[] b = {5, 6, 2, -4, 3, -8, 7, -9};
         System.out.println(Arrays.toString(color.sortColors(a)));
-        System.out.println(Arrays.toString(color.sortColors(b)));
+        System.out.println(Arrays.toString(color.sortColors(b)));*/
+
+        // For Array List
+        ArrayList<Integer> al=new ArrayList<>(Arrays.asList(0, 1, 2, 0, 1, 2));
+        System.out.println(color.sortColors2(al));
     }
 }
+

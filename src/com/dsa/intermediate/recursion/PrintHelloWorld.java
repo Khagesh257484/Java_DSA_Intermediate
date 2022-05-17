@@ -1,30 +1,20 @@
 package com.dsa.intermediate.recursion;
-
+/*
+ Question : Print HelloWorld using recursion  n times.....
+* */
 public class PrintHelloWorld {
-    // print Hello World 5 times
-    public static void main(String[] args) {
-        message();
-        // we can call method 5 times but let don't do in this way
+    void print(int n) {
+        if (n > 0) {
+            print(n - 1);
+            System.out.println("HelloWorld.....");
+        }
+        // print(n - 1); This will go till infinite because base condition is not satisfying here. We're calling method out of base condition.
     }
 
-    // Can create 4 more methods to print this
-     static void message() {
-        message1();
-         System.out.println("Hello World");
+    public static void main(String[] args) {
+        PrintHelloWorld test = new PrintHelloWorld();
+        test.print(5);
+
     }
-    static void message1() {
-        message2();
-        System.out.println("Hello World");
-    }
-    static void message2() {
-        message3();
-        System.out.println("Hello World");
-    }
-    static void message3() {
-        message4();
-        System.out.println("Hello World");
-    }
-    static void message4() {
-        System.out.println("Hello World");
-    }
+
 }
