@@ -1,12 +1,8 @@
-package com.dsa.intermediate.Hashing;
-
-import java.util.*;
+package com.dsa.intermediate.linkedlist;
 
 public class Test {
-
-
-
     public static void main(String[] args) {
+        int a=10;
 
     }
 }

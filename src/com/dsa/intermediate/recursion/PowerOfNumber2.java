@@ -2,21 +2,20 @@ package com.dsa.intermediate.recursion;
 
 public class PowerOfNumber2 {
     public int pow(int A, int B, int C) {
-        if (A == 1)
-            return 1;
-        if (B == 0)
+        if (A == 0)
             return 0;
-        /*if (A == 0)
-            return 0;*/
+        if (B == 0)
+            return 1;
 
-        long p = pow(A, B / 2, C);
-
+        long p = (long) (pow(A, B / 2, C)) % C;
+        long halfPow = ((p % C) * (p % C)) % C;
 
         if (B % 2 == 0)
-            return (int) ((p * p) % C);
+            return (int) (halfPow);
         else
-            return (int) (((p * p) % C) * (A % C)) % C;
+            return (int) ((halfPow * (A % C) + C) % C) % C;
     }
+
 
     public static void main(String[] args) {
 

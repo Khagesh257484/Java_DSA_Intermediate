@@ -3,6 +3,7 @@ package com.dsa.intermediate.Hashing;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 
 /*
 Q3. Largest Continuous Sequence Zero Sum
@@ -68,8 +69,7 @@ public class LargestContinuousSequenceZeroSum {
             } else
                 hm.put(prefSum.get(i), i);
         }
-        System.out.println("kkk");
-        System.out.println(hm.toString());
+        //System.out.println(hm.toString());
         return ans;
     }
 
@@ -85,10 +85,55 @@ public class LargestContinuousSequenceZeroSum {
         return prefixSum;
     }
 
+    // This method will give the array of the largest subsequence which has 0 sum
+    public ArrayList<Integer> lszero(ArrayList<Integer> A) {
+        Map<Integer, Integer> map = new HashMap<>();
+        ArrayList<Integer> result = new ArrayList<Integer>();
+
+        map.put(0, -1);
+
+        int start = -1;
+        int end = -1;
+        int sum = 0;
+        int maxLen = -1;
+
+        // int[] a= [4, 2, -3, 1, 6]
+        // Observation : When any sum is equal to any element of the array that means your array element sum from next point(index) till
+        // existing sum index will be zero
+
+        for (int i = 0; i < A.size(); i++) {
+            sum += A.get(i);
+            if (map.containsKey(sum)) {
+               // System.out.println(map.get(sum));  // 0( it is index value of that sum which exist in the array ) 4 exist at 0th index
+                if (maxLen < (i - map.get(sum))) {  // sum is key here and index is value as we are using in put method
+                 //   System.out.println(map.get(sum));  // 0
+                    start = map.get(sum) + 1;
+                    end = i;
+                    maxLen = i - map.get(sum); // 3-0=3(maxLength) : Can not use start because it is zero index
+
+                    // if you want first subsequence sum 0 in an array then we can return it from here no need to check but if we want max
+                    // length sum then we have to continue to check till last
+                }
+            } else {
+                map.put(sum, i);
+                //map.get(sum);
+            }
+        }
+
+        if (start >= 0 && end >= 0) {
+            for (int i = start; i <= end; i++) {
+                result.add(A.get(i));
+            }
+        }
+
+        return result;
+    }
+
     public static void main(String[] args) {
         LargestContinuousSequenceZeroSum t = new LargestContinuousSequenceZeroSum();
         ArrayList<Integer> al = new ArrayList<>(Arrays.asList(4, 2, -3, 1, 6));
-                System.out.println(t.getLongestLengthSubarrayWithZeroSum(al));
+        System.out.println(t.getLongestLengthSubarrayWithZeroSum(al));
+        System.out.println(t.lszero(al));
 
 
         // System.out.println(t.subArrayWithZeroSum_BruteForc(al));
