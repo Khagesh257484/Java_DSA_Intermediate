@@ -1,3 +1,7 @@
+/*
+ Question : Given a 2D matrix of N*M, find out prefix sum of this matrix
+* */
+
 package com.dsa.advance.array;
 
 import java.util.Arrays;
