@@ -18,14 +18,14 @@ ex: A = [1,2,3,4]
 public class GoodPair {
 
     public static int solve(final int A[], int B) {
-     int n=A.length,i,j;
-     for(i=0;i<n;i++){
-         for(j=0;j<n;j++){
-             if(i!=j&&A[i]+A[j]==B){
-                 return 1;
-             }
-         }
-     }
+        int n = A.length, i, j;
+        for (i = 0; i < n; i++) {
+            for (j = 0; j < n; j++) {
+                if (i != j && A[i] + A[j] == B) {
+                    return 1;
+                }
+            }
+        }
         return 0;
     }
 
@@ -43,10 +43,11 @@ public class GoodPair {
       /*  int a2[]={510827, 351151, 96897, 925335, 299818, 192489, 456948, 44720, 510589, 598577};
         int b2=808099;
         int third=solve(a2,b2);
-        System.out.println(third)*/;
+        System.out.println(third)*/
+        ;
 
-        int a3[]={2,3,4,6,7,9};
-        int b=6;
-        System.out.println(solve(a3,b));
+        int a3[] = {2, 3, 4, 6, 7, 9};
+        int b = 6;
+        System.out.println(solve(a3, b));
     }
 }
