@@ -90,6 +90,10 @@ Explanation 2:
 
        So  A & B can be written as below
 
+       30 : 2^1 * 3^2 * 5^1
+       12 : 2^1 * 3^2
+         Remove common factor and check gcd(5,12) will be 1 and ans will be 5
+
 
 
 * */
@@ -97,7 +101,7 @@ package com.dsa.advance.math.gcd;
 
 public class LargestCoprimeDivisior {
 
-    // Linear Approach
+    // Iterative Approach
     public static int cpFact(int A, int B) {
         while (gcd(A, B) != 1) {
             A = A / gcd(A, B);
@@ -106,12 +110,39 @@ public class LargestCoprimeDivisior {
     }
 
     static int gcd(int A, int B) {
-        if (A == 0)
+        /*if (A == 0)
             return B;
-        return gcd(B % A, A);
+        return gcd(B % A, A);*/
+        if (B == 0) return A;
+        return gcd(Math.min(A, B), Math.max(A, B) % Math.min(A, B));
     }
 
+    // Recursive Approach
+    static int gcdCp(int a, int b)
+    {
+        // Everything divides 0
+        if (a == 0 || b == 0)
+            return 0;
+
+        // base case
+        if (a == b)
+            return a;
+
+        // a is greater
+        if (a > b)
+            return gcdCp(a - b, b);
+        return gcdCp(a, b - a);
+    }
+
+    static int cpFactRec(int x, int y)
+    {
+        while (gcdCp(x, y) != 1) {
+            x = x / gcdCp(x, y);
+        }
+        return x;
+    }
     public static void main(String[] args) {
         System.out.println(cpFact(30, 12));
+        System.out.println(cpFactRec(30, 12));
     }
 }

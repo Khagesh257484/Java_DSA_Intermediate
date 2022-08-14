@@ -87,9 +87,9 @@ public class GreatestCommonDivisior {
     * */
 
     static int gcd_recursive(int A, int B) {
-        if(A==0)
+        if (A == 0)
             return B;
-        return gcd_iterative(B%A,A);
+        return gcd_iterative(B % A, A);
 
         // This is wrong approach, check why is that
        /* if (B == 0)
@@ -111,6 +111,6 @@ public class GreatestCommonDivisior {
     public static void main(String[] args) {
         System.out.println(gcd(12, 36));
         System.out.println(gcd_recursive(12, 36));
-        System.out.println(gcd_iterative(12,36));
+        System.out.println(gcd_iterative(12, 36));
     }
 }
