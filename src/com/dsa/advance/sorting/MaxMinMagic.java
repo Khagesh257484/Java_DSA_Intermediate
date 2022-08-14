@@ -87,6 +87,7 @@ public class MaxMinMagic {
         // 3, 11, -1, 5
         // Sort  : -1 3 5 11
 
+return null;
 
     }
 }
