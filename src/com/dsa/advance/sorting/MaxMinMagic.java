@@ -78,16 +78,71 @@ Explanation 2:
  Answer is evident.
 * */
 
+// Approach :
+/*
+    int[] A={3, 11, -1, 5}
+
+    -> We need to check the sum of absolute difference of all possible subset
+
+   ->  First sort the array : {-1,3,5,11}
+    Possible subset of n/2 length
+        [-1,3],[5,11] = 6+8=14
+     &  [-1,5],[3,11] =4+6=10
+      & [11,-1],[3,5] =8+6=14
+       and all reverse subset of these 3 subsets like
+       [5,11],[-1,3] =6+8=14
+    & [3,11],[5,-1] = 2+12=14
+    & [3,5],[-1,11] = 4+6=10
+
+      Max =14 & Min=10
+
+ -> Finding all and store all subset is more complicated and tedious task, so think another way
+
+ -> We know that min is 10 and max 14 , if we subtract  distance element and add them then we will get the Max.
+     For example:
+
+     Get Max :   -1 & 11 has long distanced element, subtract then will get 12
+                 and 3 & 5 is second long distance element, subtract then will get 2 & sum of 12+2=14
+
+      Get Min :  To get min subtract small distance element and add them & each adjacent element is small distance element.
+                 (-1-3) + (5-11) = 4+6 =10
+
+ */
 package com.dsa.advance.sorting;
 
+import java.util.Arrays;
+
 public class MaxMinMagic {
-    public int[] solve(int[] A) {
-        // First Find the subset of n/2 length, if length is 4 then find 2 length subset.
-        // After finding subset subtract one subset element from another subset and check which one is max.
-        // 3, 11, -1, 5
-        // Sort  : -1 3 5 11
+    public static int[] solve(int[] A) {
+        int n = A.length;
+        long max = 0, min = 0;
+        long mod = 1000000007;
 
-return null;
+        // Sort the Array :
+        Arrays.sort(A);
 
+        // Get Max : To get max read array till N/2
+        for (int i = 0; i < n/ 2; i++) {
+            max = max + Math.abs(A[i] - A[n - i-1]);
+            max = max % mod;
+        }
+
+        // Get Min : increment i by 2, cause at a time we will calculate the difference of 2
+        for (int i = 0; i < n; i+=2) {
+            min = min + Math.abs(A[i] - A[i + 1]);
+            min = min % mod;
+        }
+
+        // create Array B of sieze 2
+        int[] rseult = new int[2];
+        rseult[0] = (int) max;
+        rseult[1] = (int) min;
+
+        return rseult;
+    }
+
+    public static void main(String[] args) {
+        int[] A={3,11,-1,5};
+        System.out.println(Arrays.toString(solve(A)));
     }
 }
