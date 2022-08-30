@@ -98,7 +98,7 @@ public class SprialOrderMatrix {
         int b = 3;
 
         System.out.println(Arrays.deepToString(orderMatrix.generateMatrix(a)));
-        //System.out.println(Arrays.deepToString(orderMatrix.generateMatrix(b)));
+        System.out.println(Arrays.deepToString(orderMatrix.generateMatrix(b)));
 
     }
 }

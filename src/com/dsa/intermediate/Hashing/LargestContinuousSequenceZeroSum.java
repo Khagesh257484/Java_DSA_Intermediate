@@ -104,9 +104,9 @@ public class LargestContinuousSequenceZeroSum {
         for (int i = 0; i < A.size(); i++) {
             sum += A.get(i);
             if (map.containsKey(sum)) {
-               // System.out.println(map.get(sum));  // 0( it is index value of that sum which exist in the array ) 4 exist at 0th index
+                // System.out.println(map.get(sum));  // 0( it is index value of that sum which exist in the array ) 4 exist at 0th index
                 if (maxLen < (i - map.get(sum))) {  // sum is key here and index is value as we are using in put method
-                 //   System.out.println(map.get(sum));  // 0
+                    //   System.out.println(map.get(sum));  // 0
                     start = map.get(sum) + 1;
                     end = i;
                     maxLen = i - map.get(sum); // 3-0=3(maxLength) : Can not use start because it is zero index
