@@ -133,7 +133,6 @@ public class CheckPalindrome2 {
                 if(entry.getValue()%2!=0)
                     return 0;
             }else{
-
                 if(entry.getValue()%2!=0){
                     oddCount++;
                 }
