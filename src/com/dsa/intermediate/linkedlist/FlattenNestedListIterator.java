@@ -34,21 +34,21 @@ import java.util.ArrayList;
 public class FlattenNestedListIterator {
     class NestedIterator {
         //[[1,1],2,[1,1]]
-        ArrayList<Integer> arr= new ArrayList<>();
-        int index=0;
+        ArrayList<Integer> arr = new ArrayList<>();
+        int index = 0;
+
         NestedIterator(ArrayList<NestedInteger> nestedList) {
             rec(nestedList);
         }
 
-        void rec(ArrayList<NestedInteger> nestedList){
-            if(nestedList.isEmpty())
+        void rec(ArrayList<NestedInteger> nestedList) {
+            if (nestedList.isEmpty())
                 return;
 
-            for(int i=0;i<nestedList.size();i++){
-                if(nestedList.get(i).isInteger()){
+            for (int i = 0; i < nestedList.size(); i++) {
+                if (nestedList.get(i).isInteger()) {
                     arr.add(nestedList.get(i).getInteger());
-                }
-                else{
+                } else {
                     rec(nestedList.get(i).getList());
                 }
             }
@@ -60,7 +60,7 @@ public class FlattenNestedListIterator {
         }
 
         boolean hasNext() {
-            if(index<arr.size())
+            if (index < arr.size())
                 return true;
             else
                 return false;

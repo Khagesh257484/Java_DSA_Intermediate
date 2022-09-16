@@ -1,81 +1,6 @@
-/*
-Q1. Sort List
-Unsolved
-character backgroundcharacter
-Stuck somewhere?
-Ask for help from a TA and get it resolved.
-Get help from TA.
-Problem Description
-Sort a linked list, A in O(n log n) time using constant space complexity.
-
-
-
-Problem Constraints
-0 <= |A| = 105
-
-
-
-Input Format
-The first and the only arugment of input contains a pointer to the head of the linked list, A.
-
-
-
-Output Format
-Return a pointer to the head of the sorted linked list.
-
-
-
-Example Input
-Input 1:
-
-A = [3, 4, 2, 8]
-Input 2:
-
-A = [1]
-
-
-Example Output
-Output 1:
-
-[2, 3, 4, 8]
-Output 2:
-
-[1]
-
-
-Example Explanation
-Explanation 1:
-
- The sorted form of [3, 4, 2, 8] is [2, 3, 4, 8].
-Explanation 2:
-
- The sorted form of [1] is [1].
-* */
-
-// Approach
-/*
- 1) We can use Insertion sort here but TC in worst case in n2.
-
- 2) So we can use merger sort which has TC = O(nlogn)
-
- Merge Sort :
-   1) To use merge sort, you need to know how can sort 2 array using merge sort and second one is how can we merge 2 sorted list
-
-   2) In merger sort, divide list in 2 part then sort left part and right part
-
-
- Algo :
-   1) Find middle of linkedList  :: Will use slow and fast pointer approach
-   2) sorted first half  -> Recursive call
-   3) sorted second half
-   4) merge 2 sorted list
-* */
 package com.dsa.advance.linkedList;
 
-// https://www.youtube.com/watch?v=PHxHAjQ7974
-public class SortList {
-    // 3->2->5->9->4->1->6->7->Null
-
+public class SortList2 {
     public ListNode sortList(ListNode head) {
         if (head == null || head.next == null)
             return head;
@@ -104,9 +29,6 @@ public class SortList {
         if (l2 == null)
             return l1;
 
-        // compare first node value, of l1 and l2 and update in another variable
-        // Need one pointer tail which will attach linked list
-
         ListNode ans, tail;
 
         // Compare first node value
@@ -132,7 +54,6 @@ public class SortList {
                 l2 = l2.next;
             }
         }
-
         // Check ki konsa list bacha hua hai l1 or l2
         if (l1 == null)
             tail.next = l2;
@@ -140,6 +61,5 @@ public class SortList {
             tail.next = l1;
 
         return ans;
-
     }
 }
