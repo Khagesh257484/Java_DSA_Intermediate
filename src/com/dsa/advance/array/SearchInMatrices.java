@@ -64,23 +64,27 @@ public class SearchInMatrices {
         int row = A.length;
         int col = A[0].length;
         int i = 0, j = col - 1;   // j is last column of first row.
+        int ans = 1000001;
 
         while (i >= 0 && i < row && j >= 0 && j < col) {
             if (A[i][j] == B)
-                return (i + 1) * 1009 + (j + 1);  // 1 based index so doing i+1 & j+1
+                ans = Math.min(ans, ((i + 1) * 1009 + (j + 1)));  // 1 based index so doing i+1 & j+1
 
             if (A[i][j] < B) {
                 i++;  // increasing row
             } else
                 j--;  // decreasing column
         }
-        return -1;
+        if (ans == 1000001)
+            return -1;
+        return ans;
     }
+
 
     public static void main(String[] args) {
         int[][] a = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-        System.out.println(solve(a,5));
-        System.out.println(solve(a,7));
-        System.out.println(solve(a,11));
+        System.out.println(solve(a, 5));
+        System.out.println(solve(a, 7));
+        System.out.println(solve(a, 11));
     }
 }
