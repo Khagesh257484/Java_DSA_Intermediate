@@ -49,7 +49,7 @@ Explanation 2:
 See Expected Output
 * */
 
-package com.beginner;
+package com.beginner.basic;
 
 import java.util.Scanner;
 

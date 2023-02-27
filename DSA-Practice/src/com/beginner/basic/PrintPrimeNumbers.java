@@ -59,26 +59,29 @@ Explanation 2:
  Prime numbers between [1, 10] are (2, 3, 5, 7)
 **/
 
-package com.beginner;
+package com.beginner.basic;
+
+import java.util.Scanner;
 
 public class PrintPrimeNumbers {
     static void printPrime(int n) {
-        int flag = 0;
-        if (n == 2 || n == 3)   // Corner cases
-            System.out.println(n);
-        for (int i = 2; i < n; i++) {
-            if (n % i == 0) {
+        int i = 2;
+        for (; i < n; i++) {
+            if (n % i == 0)
                 break;
-            }
-            flag=1;
         }
-        if (flag == 0)
-            System.out.println(n);
+        if (i == n)
+            System.out.println(i);
     }
 
     public static void main(String[] args) {
-        for (int i = 1; i <= 21; i++) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int i, j;
+        for (i = 1; i <= n; i++) {
             printPrime(i);
         }
     }
 }
+
+

@@ -49,7 +49,7 @@ Explanation 2:
 100 has three digits and 10101 has 5 digits.
 * */
 
-package com.beginner;
+package com.beginner.basic;
 
 import java.util.Scanner;
 

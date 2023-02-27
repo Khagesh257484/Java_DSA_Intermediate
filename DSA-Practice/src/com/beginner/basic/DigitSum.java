@@ -51,7 +51,7 @@ Sum(123) = 1+2+3 = 6.
 Sum(1589) = 1+5+8+9 = 23.
 * */
 
-package com.beginner;
+package com.beginner.basic;
 
 import java.util.Scanner;
 

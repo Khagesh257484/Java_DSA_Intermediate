@@ -69,7 +69,7 @@ Explanation 3:
  For A = 131, reverse(A) = reverse(131) = 131, which is same as A.
 * */
 
-package com.beginner;
+package com.beginner.basic;
 
 public class IsPalindromicNumber {
 
