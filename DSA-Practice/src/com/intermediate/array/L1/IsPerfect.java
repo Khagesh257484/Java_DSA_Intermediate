@@ -74,7 +74,7 @@ Explanation 2:
 
 * */
 
-package com.intermediate.array;
+package com.intermediate.array.L1;
 
 import java.util.Scanner;
 

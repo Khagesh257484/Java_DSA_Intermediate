@@ -59,7 +59,7 @@ Explanation 2:
 1 and 153 are armstrong number under 200.
 * */
 
-package com.intermediate.array;
+package com.intermediate.array.L1;
 
 import java.util.Scanner;
 
