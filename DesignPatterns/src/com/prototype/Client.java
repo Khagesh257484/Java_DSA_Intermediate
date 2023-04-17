@@ -9,7 +9,7 @@ public class Client {
 
         if(input.equalsIgnoreCase("car")){
             Car car= new Car();
-            car.setType((String) VehicleType.CAR);
+            car.setType("CAR");  // VehicleType.CAR
         }
     }
 }
