@@ -19,4 +19,12 @@ public class ArraySumFactory {
 
         return suffixSum;
     }
+
+    public static int[] createEvenSum(int[] arr){
+return null;
+    }
+
+    public static int[] createOddSum(int[] arr){
+return null;
+    }
 }
