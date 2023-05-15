@@ -61,7 +61,7 @@ Explanation 2:
 
 * */
 
-package com.intermediate.array.L1;
+package com.intermediate.array;
 
 import java.util.Scanner;
 

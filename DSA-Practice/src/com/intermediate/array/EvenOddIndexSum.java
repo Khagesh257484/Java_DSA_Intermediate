@@ -1,8 +1,18 @@
-package com.intermediate.array.L2;
+/*
+Given an array and Q queries. Find sum of all even and odd elements between start and end index.
+
+in[] arr={2,3,1,-1,0,8,5,4}
+
+start=3 end=6 , oddSum=7
+start=1 end=5 , eveSum=1
+
+* */
+
+package com.intermediate.array;
 
 import java.util.Scanner;
 
-public class EvenOddElementSum {
+public class EvenOddIndexSum {
 
 
     // Version 1

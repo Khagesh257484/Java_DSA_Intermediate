@@ -16,7 +16,7 @@ Highest element: 300
 
 * */
 
-package com.intermediate.array.L2.addOperation;
+package com.intermediate.array.addOperation;
 
 import java.util.Scanner;
 

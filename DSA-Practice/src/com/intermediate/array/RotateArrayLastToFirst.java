@@ -6,7 +6,7 @@
  Ans : {6,9,8,3,-2,1,4}
 * */
 
-package com.intermediate.array.L1;
+package com.intermediate.array;
 
 public class RotateArrayLastToFirst {
 }

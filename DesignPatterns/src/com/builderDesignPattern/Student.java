@@ -79,4 +79,16 @@ public class Student {
     public void setPsp(double psp) {
         this.psp = psp;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", university='" + university + '\'' +
+                ", age=" + age +
+                ", weight=" + weight +
+                ", psp=" + psp +
+                '}';
+    }
 }

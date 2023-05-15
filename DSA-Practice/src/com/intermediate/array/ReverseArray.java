@@ -56,7 +56,7 @@ Explanation 2:
 Clearly, Reverse of [1,1,10] is [10,1,1]
 * */
 
-package com.intermediate.array.L1;
+package com.intermediate.array;
 
 import java.util.Arrays;
 

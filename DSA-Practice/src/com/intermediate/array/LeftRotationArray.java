@@ -70,7 +70,7 @@ B[1] = 3 which requires 3 times left rotation
 2: [4, 5, 1, 2, 4]
 * */
 
-package com.intermediate.array.L1;
+package com.intermediate.array;
 
 import javax.sound.midi.Soundbank;
 import java.util.Arrays;

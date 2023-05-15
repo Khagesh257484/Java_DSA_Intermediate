@@ -71,7 +71,7 @@ Explanation 3:
 
 * */
 
-package com.intermediate.array.L1;
+package com.intermediate.array;
 
 public class GoodPair {
     public static int goodPair(final int[] arr, final int k) {

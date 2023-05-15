@@ -41,7 +41,7 @@ Explanation 2:
 1001 is not a perfect square.
 * */
 
-package com.intermediate.array.L1;
+package com.intermediate.array;
 
 // -ve number can't be perfect square.
 public class IsPerfectSquare {

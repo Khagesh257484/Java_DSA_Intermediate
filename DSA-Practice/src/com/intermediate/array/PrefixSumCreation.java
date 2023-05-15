@@ -8,7 +8,7 @@
 
 * */
 
-package com.intermediate.array.L2;
+package com.intermediate.array;
 
 import java.util.ArrayList;
 import java.util.List;

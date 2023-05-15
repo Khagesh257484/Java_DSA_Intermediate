@@ -5,7 +5,7 @@
   ans=5;
 * */
 
-package com.intermediate.array.L1;
+package com.intermediate.array;
 
 public class CountElement {
     public static int countElement(int[] arr) {

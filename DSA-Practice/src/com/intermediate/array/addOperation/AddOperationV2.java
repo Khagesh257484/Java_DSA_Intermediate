@@ -16,9 +16,9 @@ Highest element: 300
 
 * */
 
-package com.intermediate.array.L2.addOperation;
+package com.intermediate.array.addOperation;
 
-import com.intermediate.array.ArrayFactory;
+import com.intermediate.array.ArraySumFactory;
 
 import java.util.Scanner;
 
@@ -49,7 +49,7 @@ public class AddOperationV2 {
 
         }
 
-          System.out.println("Max Element of Array is : " + findMax(ArrayFactory.createPrefixSum(arr)));
+          System.out.println("Max Element of Array is : " + findMax(ArraySumFactory.createPrefixSum(arr)));
     }
 
     // TC : O(N*M)

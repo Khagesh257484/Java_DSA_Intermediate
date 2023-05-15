@@ -27,6 +27,9 @@ public class Client {
         Student st1= new Student("Khagesh","Sharma");
         Student st2=new Student("Krishna","Sharma",30);
 
+        System.out.println("   ********** ");
+        System.out.println(st1.toString());
+
         System.out.println(st2.getFirstName()+st1.getFirstName());
 
     }
